@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  background-color: #effafa;
+  position: relative;
+  padding: 24px;
+  flex-direction: column;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 156px;
+  background: url(./assets/images/bg-header-desktop.svg) #5ca5a5;
+}
+
+.listing-container {
+  display: flex;
+  margin: 232px auto;
+  max-width: 1110px;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1110px;
+  min-height: 152px;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  border-radius: 5px;
+  padding: 32px 40px;
+}
+
+.job-item--higlighted {
+  border-left: 5px solid #5ca5a5;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 88px;
+  height: 88px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.company {
+  line-height: 16px;
+  color: #5ca5a5;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.secondary-tags-container {
+  display: flex;
+  align-items: "center";
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.new {
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 11px;
+  padding: 7px 8px 4px 8px;
+  line-height: 11px;
+  color: #fff;
+  background-color: #5ca5a5;
+  text-transform: uppercase;
+}
+
+.featured {
+  border-radius: 12px;
+  font-size: 11px;
+  padding: 7px 8px 4px 8px;
+  color: #fff;
+  background-color: #2b3939;
+  text-transform: uppercase;
+}
+
+.hidden {
+  opacity: 0;
+  color: #fff;
+}
+
+.position {
+  font-size: 18px;
+  color: #2b3939;
+  font-weight: 600;
+}
+
+.bottom-row {
+  display: flex;
+  gap: 16px;
+  color: #7c8f8f;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  position: relative;
+}
+
+.contract,
+.location {
+  position: relative;
+}
+
+.contract::before,
+.location::before {
+  content: ".";
+  font-size: 22px;
+  position: absolute;
+  color: #7c8f8f;
+  left: -11px;
+  top: -6px;
+}
+
+.tag-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tag-item {
+  padding: 4px 8px;
+  background-color: rgba(92, 165, 165, 0.1);
+  border-radius: 4px;
+  border-width: 0px;
+  line-height: 24px;
+  color: #5ca5a5;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+}
+
+.tag-item:hover {
+  cursor: pointer;
+  background-color: #5ca5a5;
+  color: #fff;
+}
+
+.filters-row-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -135px;
+  margin-bottom: 39px;
+  z-index: 999;
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  max-width: 1110px;
+  width: 100%;
+}
+
+.filters-row {
+  display: flex;
+  gap: 16px;
+}
+
+.clear-button {
+  border-style: none;
+  background-color: transparent;
+  color: #7c8f8f;
+  display: block;
+}
+
+.clear-button:hover {
+  color: #5ca5a5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.filter {
+  display: flex;
+  background-color: rgba(92, 165, 165, 0.1);
+  color: #5ca5a5;
+  border-radius: 4px;
+}
+
+.filter-description {
+  padding: 4px 8px;
+  border-radius: 4px 0px 0px 4px;
+  line-height: 24px;
+  color: #5ca5a5;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+}
+
+.filter-remove-button {
+  padding: 9px;
+  background-color: #5ca5a5;
+  border-radius: 0px 4px 4px 0px;
+  border-width: 0px;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.filter-remove-button:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .description {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #b7c4c4;
+  }
+
+  .listing-container {
+    gap: 40px;
+  }
+
+  .filters-row-button-container {
+    padding: 20px 24px 20px 19px;
+    gap: 10px;
+  }
+
+  .filters-row {
+    flex-wrap: wrap;
+  }
+
+  .job-item {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 24px 24px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: -48px;
+  }
+
+  .tag-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .bottom-row {
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .top-row span {
+    margin-top: 8px;
+  }
+}
